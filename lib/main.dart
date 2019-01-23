@@ -98,13 +98,17 @@ class _MyHomePageState extends State<MyHomePage> {
               overflow: TextOverflow.ellipsis,
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
-        TextField(
-          textAlign: TextAlign.center,
-          decoration: InputDecoration(
-            border: InputBorder.none,
-            hintText: 'Please enter your name'
-        ),
+        Padding(
+          padding: const EdgeInsets.symmetric(vertical: 5.0, horizontal: 30.0),
+          child: TextFormField(
+            textAlign: TextAlign.center,
+            decoration: new InputDecoration(
+              enabledBorder: const OutlineInputBorder(
+                borderSide: const BorderSide(color: Colors.grey),
+              ),
+            ),
       ),
+        ),
             Text(
               'Password',
               textAlign: TextAlign.center,
@@ -112,7 +116,7 @@ class _MyHomePageState extends State<MyHomePage> {
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 30.0),
+          padding: const EdgeInsets.symmetric(vertical: 5.0, horizontal: 30.0),
           child: TextFormField(
             textAlign: TextAlign.center,
             decoration: new InputDecoration(
